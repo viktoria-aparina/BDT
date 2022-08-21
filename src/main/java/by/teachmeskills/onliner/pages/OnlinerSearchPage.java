@@ -1,4 +1,4 @@
-package pages;
+package by.teachmeskills.onliner.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 

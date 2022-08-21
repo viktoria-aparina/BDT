@@ -1,4 +1,4 @@
-package dto;
+package by.teachmeskills.onliner.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

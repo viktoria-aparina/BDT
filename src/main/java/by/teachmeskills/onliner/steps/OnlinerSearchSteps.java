@@ -1,16 +1,14 @@
-package by.teachmeskills.steps;
+package by.teachmeskills.onliner.steps;
 
 import com.codeborne.selenide.ElementsCollection;
-import dto.Characteristics;
+import by.teachmeskills.onliner.dto.Characteristics;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import pages.OnlinerSearchPage;
+import by.teachmeskills.onliner.pages.OnlinerSearchPage;
 
-import java.util.List;
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.getWebDriverLogs;
@@ -49,7 +47,7 @@ public class OnlinerSearchSteps {
     public void isTheFirstSearchResult(String searchResultTitle) {
         ElementsCollection productTitles = searchPage.getSearchResultProductTitles();
         String actualTitle = productTitles.first().getText();
-        assertThat(actualTitle).as("The first search result in incorrect").contains(searchResultTitle);
+        assertThat(actualTitle).as("The first search result is incorrect").contains(searchResultTitle);
     }
 
     @And("Search result contains the next characteristics")
